@@ -6,7 +6,7 @@ export const userConfig = [
 		userId: '973428788983631922',
 		webhookURL: 'https://discord.com/api/webhooks/1181794180293476432/PrIQHxo-ipkKOanglJXfqVApJH7jLPv7jTmvrP5oWFiocFribVf6L0QrZSZzuerUMIBS',
 		filter: ((msg: Message | PartialMessage) => {
-			return msg.content?.includes('@everyone');
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY');
 		})
 	},
 	{
@@ -22,7 +22,7 @@ export const userConfig = [
 		userId: '211962970723450880',
 		webhookURL: 'https://discord.com/api/webhooks/1181819998444998656/lRjs-4U6vhXmFL1UiS9S047hGb0gZ0pGzfSlwSxqub70ZFDhEAm71HJgZnqdpsxoY6v4',
 		filter: ((msg: Message | PartialMessage) => {
-			return true;
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY');
 		})
 	},
 	{
@@ -30,7 +30,7 @@ export const userConfig = [
 		userId: '744998407789084783',
 		webhookURL: 'https://discord.com/api/webhooks/1181820167001473136/p7LgijD9-yegNcpEemBE4x50S2P7myJmUWUj6reMt-BgKK-o_ikf42l5zQsF9sirAUUX',
 		filter: ((msg: Message | PartialMessage) => {
-			return true;
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY');
 		})
 	},
 	{
@@ -38,7 +38,7 @@ export const userConfig = [
 		userId: '1079052627456819272',
 		webhookURL: 'https://discord.com/api/webhooks/1181820268604293130/lnSDvNvwbVZYpa86UizIC6N7kIFcy1Pl2NwnL6scB15KHeyPYHp-wfsIl0nvkfF7lGJj',
 		filter: ((msg: Message | PartialMessage) => {
-			return true;
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY');
 		})
 	},
 	{
@@ -46,7 +46,15 @@ export const userConfig = [
 		userId: '1103699961155166288',
 		webhookURL: 'https://discord.com/api/webhooks/1181820351441809448/MLJ9tf_GNkbAoiAGphYojiI1c-13JbsUx6GVAo9nrianvSjfx-annawVooCRV6vnmdJj',
 		filter: ((msg: Message | PartialMessage) => {
-			return true;
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY');
+		})
+	},
+	{
+		name: 'Data Sheets',
+		userId: '494998982997835795',
+		webookURL: 'TODO: create webook',
+		filter: ((msg: Message | PartialMessage) => {
+			return ['1148739942143496232', '1148739942143496232', '1143881697860014241', '1161340126429978755'].includes(msg.channel.id);
 		})
 	},
 ]

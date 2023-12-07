@@ -6,7 +6,8 @@ export const userConfig = [
 		userId: '973428788983631922',
 		webhookURL: 'https://discord.com/api/webhooks/1181794180293476432/PrIQHxo-ipkKOanglJXfqVApJH7jLPv7jTmvrP5oWFiocFribVf6L0QrZSZzuerUMIBS',
 		filter: ((msg: Message | PartialMessage) => {
-			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY') || msg.channel.id == '1150640929712132116';
+			return msg.content?.includes('@everyone') || msg.content?.includes('@here') || msg.content?.includes('PLAY') 
+				|| msg.content?.includes('10K') || msg.channel.id == '1150640929712132116' || msg.channel.id == '1095102386000900096';
 		})
 	},
 	{
@@ -52,7 +53,7 @@ export const userConfig = [
 	{
 		name: 'Data Sheets',
 		userId: '494998982997835795',
-		webookURL: 'https://discord.com/api/webhooks/1182052277868044328/KVfLlUCIy1kvatHEKuieoLZf7Xg5zSEqIK3KhdlGFy8MQ5GWoUqcAswMNTjqnmisR0f6',
+		webhookURL: 'https://discord.com/api/webhooks/1182052277868044328/KVfLlUCIy1kvatHEKuieoLZf7Xg5zSEqIK3KhdlGFy8MQ5GWoUqcAswMNTjqnmisR0f6',
 		filter: ((msg: Message | PartialMessage) => {
 			return ['1148739942143496232', '1148739942143496232', '1143881697860014241', '1161340126429978755'].includes(msg.channel.id);
 		})
